@@ -1,0 +1,32 @@
+-------------------------------
+Queue Size: 10
+Number of Jobs: 10
+Number of Producers: 2
+Number of Consumers: 2
+-------------------------------
+Consumer(1): Job id 18446744073709551614 executing sleep duration 0
+Producer(1Producer(): Job id 18446744073709551615 duration 2
+2): Job id 18446744073709551615 duration 4
+Consumer(2): Job id 18446744073709551615 executing sleep duration 4
+Producer(1): Job id 0 duration 8
+Consumer(1): Job id 0 completed
+Consumer(1): Job id 18446744073709551615 executing sleep duration 8
+Producer(2): Job id 0 duration 0
+Producer(1): Job id 1 duration 4
+Producer(2): Job id 2 duration 8
+Producer(2): Job id 3 duration 3
+Consumer(2): Job id 3 completed
+Consumer(2): Job id 2 executing sleep duration 0
+Producer(Consumer(21): Job id ): Job id 3 completed3 duration 8
+Consumer(2): Job id 2 executing sleep duration 4
+
+Producer(1): Job id 3 duration 9
+Producer(2): Job id 4 duration 3
+Producer(2): Job id 5 duration 1
+Consumer(1): Job id 5 completed
+Consumer(1): Job id 4 executing sleep duration 8
+Consumer(2): Job id 4 completed
+Consumer(2): Job id 3 executing sleep duration 3
+Producer(1): Job id 4 duration 7
+Producer(1): Job id 5 duration 3
+Producer(2): Job id 6 duration 5

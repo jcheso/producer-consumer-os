@@ -1,3 +1,6 @@
 main.o
 main
 helper.o
+.vscode/launch.json
+.gitignore
+.gitignore

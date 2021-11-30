@@ -1,0 +1,4 @@
+// Check sems
+ipcs -s
+// Remove sems
+ipcs -rm id

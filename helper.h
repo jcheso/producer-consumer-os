@@ -23,7 +23,7 @@
 // #include <semaphore.h>
 using namespace std;
 
-#define SEM_KEY 0x23 // Change this number as needed
+#define SEM_KEY 0x24 // Change this number as needed
 
 union semun
 {
@@ -38,3 +38,4 @@ int sem_init(int, int, int);
 void sem_wait(int, short unsigned int);
 void sem_signal(int, short unsigned int);
 int sem_close(int);
+int sem_wait(int id, short unsigned int num, int timeout);

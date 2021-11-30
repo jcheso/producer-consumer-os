@@ -49,6 +49,16 @@ void sem_wait(int id, short unsigned int num)
   semop(id, op, 1);
 }
 
+int sem_wait(int id, short unsigned int num, int timeout)
+{
+  struct timespec t;
+  t.tv_sec = timeout;
+  t.tv_nsec = 0;
+  struct sembuf op[] = {
+      {num, -1, SEM_UNDO}};
+  return semtimedop (id, op, 1, &t);
+}
+
 void sem_signal(int id, short unsigned int num)
 {
   struct sembuf op[] = {

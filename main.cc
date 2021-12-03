@@ -10,92 +10,17 @@ void *consumer(void *args);
 // Create an array of 3 semaphores
 int semArray = sem_create(SEM_KEY, 3);
 int const TIME_OUT = 20;
-
-class Queue {
-   public:
-    int front, rear, queue_size;
-    std::unique_ptr<int[]> items;
-    Queue(int queue_size) : queue_size(queue_size), items{new int[queue_size]} {
-        front = -1;
-        rear = -1;
-    };
-    int getValue(int index) {
-        return items[index];
-    }
-    // Check if the queue is full
-    bool isFull() {
-        if (front == 0 && rear == queue_size - 1) {
-            return true;
-        }
-        if (front == rear + 1) {
-            return true;
-        }
-        return false;
-    }
-    // Check if the queue is empty
-    bool isEmpty() {
-        if (front == -1)
-            return true;
-        else
-            return false;
-    }
-    // Adding an element
-    void enQueue(int element) {
-        if (isFull()) {
-            cout << "Queue is full";
-        } else {
-            if (front == -1) front = 0;
-            rear = (rear + 1) % queue_size;
-            items[rear] = element;
-        }
-    }
-    // Removing an element
-    int deQueue() {
-        int element;
-        if (isEmpty()) {
-            cout << "Queue is empty" << endl;
-            return (-1);
-        } else {
-            element = items[front];
-            if (front == rear) {
-                front = -1;
-                rear = -1;
-            }
-            // Q has only one element,
-            // so we reset the queue after deleting it.
-            else {
-                front = (front + 1) % queue_size;
-            }
-            return (element);
-        }
-    }
-
-    void display() {
-        // Function to display status of Circular Queue
-        int i;
-        if (isEmpty()) {
-            cout << endl
-                 << "Empty Queue" << endl;
-        } else {
-            cout << "Front -> " << front;
-            cout << endl
-                 << "Items -> ";
-            for (i = front; i != rear; i = (i + 1) % queue_size)
-                cout << items[i];
-            cout << items[i];
-            cout << endl
-                 << "Rear -> " << rear;
-        }
-    }
-};
+int front = 0;
+int rear = 0;
 
 class ThreadArguments {
    public:
-    int num_of_threads = 0;
+    int num_jobs = 0;
     int threadId = 0;
-    Queue *q;
+    int *queue;
+    int queue_size = 0;
     // Constructor
-    ThreadArguments(int num_of_threads, int threadId, Queue *q) : num_of_threads(num_of_threads), threadId(threadId), q(q) {}
+    ThreadArguments(int num_jobs, int threadId, int *queue, int queue_size) : num_jobs(num_jobs), threadId(threadId), queue(queue), queue_size(queue_size) {}
 };
 
 int main(int argc, char **argv) {
@@ -124,6 +49,7 @@ int main(int argc, char **argv) {
     pthread_t consumerid[num_consumers];
 
     // **INITIALISE SEMAPHORES**
+    // Check if < 0 for fail
     // Mutual Exclusion Binary Sempahore
     sem_init(semArray, 0, 1);
     // Semphore to check if queue has space
@@ -133,19 +59,19 @@ int main(int argc, char **argv) {
 
     // ** INITIALISE DATA STRUCTURES **
     int i;
-    Queue *q = new Queue(queue_size);
+    int queue[queue_size];
     // Randomise the random number seed for each run of the program
     srand(time(NULL));
 
     // Create Producer Threads
     for (i = 0; i < num_producers; i++) {
-        ThreadArguments *argument = new ThreadArguments(num_jobs, i, q);
+        ThreadArguments *argument = new ThreadArguments(num_jobs, i, queue, queue_size);
         if (pthread_create(&producerid[i], NULL, producer, (void *)argument) != 0)
             perror("Failed to create producer thread");
     }
     // Create Consumer Threads
     for (i = 0; i < num_consumers; i++) {
-        ThreadArguments *argument = new ThreadArguments(num_jobs, i, q);
+        ThreadArguments *argument = new ThreadArguments(num_jobs, i, queue, queue_size);
         if (pthread_create(&consumerid[i], NULL, consumer, (void *)argument) != 0)
             perror("Failed to create consumer thread");
     }
@@ -170,9 +96,10 @@ int main(int argc, char **argv) {
 
 void *producer(void *args) {
     ThreadArguments *prod_args = (ThreadArguments *)args;
-    Queue *q = prod_args->q;
+    int *queue = prod_args->queue;
+    int queue_size = prod_args->queue_size;
     // Iterate through and create the number of jobs required per a producer
-    for (int i = 0; i < prod_args->num_of_threads; i++) {
+    for (int i = 0; i < prod_args->num_jobs; i++) {
         // Generate random duration for each job between 1 – 10 seconds.
         int job_duration = rand() % 10;
         // Sleep a 1-5 seconds before adding each job to the queue.
@@ -187,31 +114,35 @@ void *producer(void *args) {
                  << "): No more jobs to generate." << endl;
             break;
         };
-
         sem_wait(semArray, 0);
-        q->enQueue(job_duration);
-        int job_id = q->front;
+        queue[rear] = job_duration;
+        int job_id = rear;
+        rear++;
+        if (rear > queue_size) {
+            rear = 0;
+        }
         // If a job is taken (and deleted) by the consumer, then another job can be produced which has the same id.
         sem_signal(semArray, 0);
-        sem_signal(semArray, 2);
-
         // Print the status
         cout << "Producer("
              << prod_args->threadId
              << "): Job id " << job_id << " duration " << job_duration << endl;
+        sem_signal(semArray, 2);
     }
-    // delete prod_args;
     // Quit when there are no more jobs left to produce.
     cout << "Producer("
          << prod_args->threadId
          << "): No more jobs to generate." << endl;
+    delete prod_args;
     pthread_exit(0);
 }
 
 void *consumer(void *args) {
     ThreadArguments *cons_args = (ThreadArguments *)args;
-    Queue *q = cons_args->q;
+    int *queue = cons_args->queue;
     int threadId = cons_args->threadId;
+    int queue_size = cons_args->queue_size;
+
     while (1) {
         // Wait for a job to be added to the queue
         // If there are no jobs left to consume, wait for 20 seconds to check if any new jobs are added, and if not, quit.
@@ -223,22 +154,25 @@ void *consumer(void *args) {
         // Mutual Exclusion to Queue
         sem_wait(semArray, 0);
         // Retrieve job duration and job id
-        int job_id = q->front;
-        int job_duration = q->getValue(job_id);
+        int job_duration = queue[front];
+        int job_id = front;
+        front++;
+
+        if (front > queue_size) {
+            front = 0;
+        }
+        // Remove job from queue
         // Remove Mutual Exclusion
         sem_signal(semArray, 0);
+        // sem_signal(semArray, 0);
         // Consume job
-        sleep(job_duration);
-        // Gain mutual exclusion to queue
-        sem_wait(semArray, 0);
-        // Remove job from queue
-        q->deQueue();
-        sem_signal(semArray, 0);
 
         // Print the status
-        cout << "Consumer(" << job_id << "): Job id " << job_id << " executing sleep duration " << job_duration << endl;
-        cout << "Consumer(" << job_id << "): Job id " << job_id << " completed" << endl;
+        cout << "Consumer(" << threadId << "): Job id " << job_id << " executing sleep duration " << job_duration << endl;
         sem_signal(semArray, 1);
+        sleep(job_duration);
+        cout << "Consumer(" << threadId << "): Job id " << job_id << " completed" << endl;
     }
+    delete cons_args;
     pthread_exit(0);
 }

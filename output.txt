@@ -1,261 +1,47 @@
 -------------------------------
-Queue Size: 10
-Number of Jobs: 10
+Queue Size: 5
+Number of Jobs per Producer: 6
 Number of Producers: 2
-Number of Consumers: 2
+Number of Consumers: 3
 -------------------------------
-Consumer(1): Job id 18446744073709551614 executing sleep duration 0
-Consumer(2): Job id 18446744073709551613 executing sleep duration 0
-Consumer(1): Job id 18446744073709551613 completed
-Consumer(1): Job id 18446744073709551612 executing sleep duration 0
-Consumer(2): Job id 18446744073709551612 completed
-Consumer(2): Job id 18446744073709551611 executing sleep duration 0
-Consumer(1): Job id 18446744073709551611 completed
-Consumer(1): Job id 18446744073709551610 executing sleep duration 0
-Consumer(2): Job id 18446744073709551610 completed
-Consumer(2): Job id 18446744073709551609 executing sleep duration 0
-Consumer(1): Job id 18446744073709551609 completed
-Consumer(1): Job id 18446744073709551608 executing sleep duration 0
-Consumer(2): Job id 18446744073709551608 completed
-Consumer(2): Job id 18446744073709551607 executing sleep duration 0
-Consumer(1): Job id 18446744073709551607 completed
-Consumer(1): Job id 18446744073709551606 executing sleep duration 0
-Consumer(2): Job id 18446744073709551606 completed
-Consumer(2): Job id 18446744073709551605 executing sleep duration 0
-Consumer(1): Job id 18446744073709551605 completed
-Consumer(1): Job id 18446744073709551604 executing sleep duration 0
-Consumer(2): Job id 18446744073709551604 completed
-Consumer(2): Job id 18446744073709551603 executing sleep duration 0
-Consumer(1): Job id 18446744073709551603 completed
-Consumer(1): Job id 18446744073709551602 executing sleep duration 0
-Consumer(2): Job id 18446744073709551602 completed
-Consumer(2): Job id 18446744073709551601 executing sleep duration 0
-Consumer(1): Job id 18446744073709551601 completed
-Consumer(1): Job id 18446744073709551600 executing sleep duration 0
-Consumer(2): Job id 18446744073709551600 completed
-Consumer(2): Job id 18446744073709551599 executing sleep duration 0
-Consumer(1): Job id 18446744073709551599 completed
-Consumer(1): Job id 18446744073709551598 executing sleep duration 0
-Consumer(2): Job id 18446744073709551598 completed
-Consumer(Consumer(2): Job id 18446744073709551597 executing sleep duration 0
-1): Job id 18446744073709551597 completed
-Consumer(1): Job id 18446744073709551596 executing sleep duration 0
-Consumer(2): Job id 18446744073709551596 completed
-Consumer(2): Job id 18446744073709551595 executing sleep duration 0
-Consumer(1): Job id 18446744073709551595 completed
-Consumer(1): Job id 18446744073709551594 executing sleep duration 0
-Consumer(2): Job id 18446744073709551594 completed
-Consumer(2): Job id 18446744073709551593 executing sleep duration 0
-Consumer(1): Job id 18446744073709551593 completed
-Consumer(1): Job id 18446744073709551592 executing sleep duration 0
-Consumer(2): Job id 18446744073709551592 completed
-Consumer(2): Job id 18446744073709551591 executing sleep duration 0
-Consumer(1): Job id 18446744073709551591 completed
-Consumer(1): Job id 18446744073709551590 executing sleep duration 0
-Consumer(2): Job id 18446744073709551590 completed
-Consumer(2): Job id 18446744073709551589 executing sleep duration 0
-Consumer(1): Job id 18446744073709551589 completed
-Consumer(1): Job id 18446744073709551588 executing sleep duration 0
-Consumer(2): Job id 18446744073709551588 completed
-Consumer(2): Job id 18446744073709551587 executing sleep duration 0
-Consumer(1): Job id 18446744073709551587 completed
-Consumer(1): Job id 18446744073709551586 executing sleep duration 0
-Consumer(2): Job id 18446744073709551586 completed
-Consumer(2): Job id 18446744073709551585 executing sleep duration 0
-Consumer(1): Job id 18446744073709551585 completed
-Consumer(1): Job id 18446744073709551584 executing sleep duration 0
-Consumer(2): Job id 18446744073709551584 completed
-Consumer(2): Job id 18446744073709551583 executing sleep duration 0
-Consumer(1): Job id 18446744073709551583 completed
-Consumer(1): Job id 18446744073709551582 executing sleep duration 0
-Consumer(2): Job id 18446744073709551582 completed
-Consumer(2): Job id 18446744073709551581 executing sleep duration 0
-Consumer(1): Job id 18446744073709551581 completed
-Consumer(1): Job id 18446744073709551580 executing sleep duration 0
-Consumer(2): Job id 18446744073709551580 completed
-Consumer(2): Job id 18446744073709551579 executing sleep duration 0
-Consumer(1): Job id 18446744073709551579 completed
-Consumer(1): Job id 18446744073709551578 executing sleep duration 0
-Consumer(2): Job id 18446744073709551578 completed
-Consumer(2): Job id 18446744073709551577 executing sleep duration 0
-Consumer(1): Job id 18446744073709551577 completed
-Consumer(1): Job id 18446744073709551576 executing sleep duration 0
-Consumer(2): Job id 18446744073709551576 completed
-Consumer(2): Job id 18446744073709551575 executing sleep duration 0
-Consumer(1): Job id 18446744073709551575 completed
-Consumer(1): Job id 18446744073709551574 executing sleep duration 0
-Consumer(2): Job id 18446744073709551574 completed
-Consumer(2): Job id 18446744073709551573 executing sleep duration 0
-Consumer(1): Job id 18446744073709551573 completed
-Consumer(1): Job id 18446744073709551572 executing sleep duration 0
-Consumer(2): Job id 18446744073709551572 completed
-Consumer(2): Job id 18446744073709551571 executing sleep duration 0
-Consumer(1): Job id 18446744073709551571 completed
-Consumer(1): Job id 18446744073709551570 executing sleep duration 0
-Consumer(2): Job id 18446744073709551570 completed
-Consumer(2): Job id 18446744073709551569 executing sleep duration 0
-Consumer(1): Job id 18446744073709551569 completed
-Consumer(1): Job id 18446744073709551568 executing sleep duration 0
-Consumer(2): Job id 18446744073709551568 completed
-Consumer(2): Job id 18446744073709551567 executing sleep duration 0
-Consumer(1): Job id 18446744073709551567 completed
-Consumer(1): Job id 18446744073709551566 executing sleep duration 0
-Consumer(2): Job id 18446744073709551566 completed
-Consumer(2): Job id 18446744073709551565 executing sleep duration 0
-Consumer(1): Job id 18446744073709551565 completed
-Consumer(1): Job id 18446744073709551564 executing sleep duration 0
-Consumer(2): Job id 18446744073709551564 completed
-Consumer(2): Job id 18446744073709551563 executing sleep duration 0
-Consumer(1): Job id 18446744073709551563 completed
-Consumer(1): Job id 18446744073709551562 executing sleep duration 0
-Consumer(2): Job id 18446744073709551562 completed
-Consumer(2): Job id 18446744073709551561 executing sleep duration 0
-Consumer(1): Job id 18446744073709551561 completed
-Consumer(1): Job id 18446744073709551560 executing sleep duration 0
-Consumer(2): Job id 18446744073709551560 completed
-Consumer(2): Job id 18446744073709551559 executing sleep duration 0
-Consumer(1): Job id 18446744073709551559 completed
-Consumer(1): Job id 18446744073709551558 executing sleep duration 0
-Consumer(2): Job id 18446744073709551558 completed
-Consumer(2): Job id 18446744073709551557 executing sleep duration 0
-Consumer(1): Job id 18446744073709551557 completed
-Consumer(1): Job id 18446744073709551556 executing sleep duration 0
-Consumer(2): Job id 18446744073709551556 completed
-Consumer(2): Job id 18446744073709551555 executing sleep duration 0
-Consumer(1): Job id 18446744073709551555 completed
-Consumer(1): Job id 18446744073709551554 executing sleep duration 0
-Consumer(2): Job id 18446744073709551554 completed
-Consumer(2): Job id 18446744073709551553 executing sleep duration 0
-Consumer(1): Job id 18446744073709551553 completed
-Consumer(1): Job id 18446744073709551552 executing sleep duration 0
-Consumer(2): Job id 18446744073709551552 completed
-Consumer(2): Job id 18446744073709551551 executing sleep duration 0
-Consumer(1): Job id 18446744073709551551 completed
-Consumer(1): Job id 18446744073709551550 executing sleep duration 0
-Consumer(2): Job id 18446744073709551550 completed
-Consumer(2): Job id 18446744073709551549 executing sleep duration 0
-Consumer(1): Job id 18446744073709551549 completed
-Consumer(1): Job id 18446744073709551548 executing sleep duration 0
-Consumer(2): Job id 18446744073709551548 completed
-Consumer(2): Job id 18446744073709551547 executing sleep duration 0
-Consumer(1): Job id 18446744073709551547 completed
-Consumer(1): Job id 18446744073709551546 executing sleep duration 0
-Consumer(2): Job id 18446744073709551546 completed
-Consumer(2): Job id 18446744073709551545 executing sleep duration 0
-Consumer(1): Job id 18446744073709551545 completed
-Consumer(1): Job id 18446744073709551544 executing sleep duration 0
-Consumer(2): Job id 18446744073709551544 completed
-Consumer(2): Job id 18446744073709551543 executing sleep duration 0
-Consumer(1): Job id 18446744073709551543 completed
-Consumer(1): Job id 18446744073709551542 executing sleep duration 0
-Consumer(2): Job id 18446744073709551542 completed
-Consumer(2): Job id 18446744073709551541 executing sleep duration 0
-Consumer(1): Job id 18446744073709551541 completed
-Consumer(1): Job id 18446744073709551540 executing sleep duration 0
-Consumer(2): Job id 18446744073709551540 completed
-Consumer(2): Job id 18446744073709551539 executing sleep duration 0
-Consumer(1): Job id 18446744073709551539 completed
-Consumer(1): Job id 18446744073709551538 executing sleep duration 0
-Consumer(2): Job id 18446744073709551538 completed
-Consumer(2): Job id 18446744073709551537 executing sleep duration 0
-Consumer(1): Job id 18446744073709551537 completed
-Consumer(1): Job id 18446744073709551536 executing sleep duration 0
-Consumer(2): Job id 18446744073709551536 completed
-Consumer(2): Job id 18446744073709551535 executing sleep duration 0
-Consumer(1): Job id 18446744073709551535 completed
-Consumer(1): Job id 18446744073709551534 executing sleep duration 0
-Consumer(2): Job id 18446744073709551534 completed
-Consumer(2): Job id 18446744073709551533 executing sleep duration 0
-Consumer(1): Job id 18446744073709551533 completed
-Consumer(1): Job id 18446744073709551532 executing sleep duration 0
-Consumer(2): Job id 18446744073709551532 completed
-Consumer(2): Job id 18446744073709551531 executing sleep duration 0
-Consumer(1): Job id 18446744073709551531 completed
-Consumer(1): Job id 18446744073709551530 executing sleep duration 0
-Consumer(2): Job id 18446744073709551530 completed
-Consumer(2): Job id 18446744073709551529 executing sleep duration 0
-Consumer(1): Job id 18446744073709551529 completed
-Consumer(1): Job id 18446744073709551528 executing sleep duration 0
-Consumer(2): Job id 18446744073709551528 completed
-Consumer(2): Job id 18446744073709551527 executing sleep duration 0
-Consumer(1): Job id 18446744073709551527 completed
-Consumer(1): Job id 18446744073709551526 executing sleep duration 0
-Consumer(2): Job id 18446744073709551526 completed
-Consumer(2): Job id 18446744073709551525 executing sleep duration 0
-Consumer(1): Job id 18446744073709551525 completed
-Consumer(1): Job id 18446744073709551524 executing sleep duration 0
-Consumer(2): Job id 18446744073709551524 completed
-Consumer(2): Job id 18446744073709551523 executing sleep duration 0
-Consumer(1): Job id 18446744073709551523 completed
-Consumer(1): Job id 18446744073709551522 executing sleep duration 0
-Consumer(2): Job id 18446744073709551522 completed
-Consumer(2): Job id 18446744073709551521 executing sleep duration 0
-Consumer(1): Job id 18446744073709551521 completed
-Consumer(1): Job id 18446744073709551520 executing sleep duration 0
-Consumer(2): Job id 18446744073709551520 completed
-Consumer(2): Job id 18446744073709551519 executing sleep duration 0
-Consumer(1): Job id 18446744073709551519 completed
-Consumer(1): Job id 18446744073709551518 executing sleep duration 0
-Consumer(2): Job id 18446744073709551518 completed
-Consumer(2): Job id 18446744073709551517 executing sleep duration 0
-Consumer(1): Job id 18446744073709551517 completed
-Consumer(1): Job id 18446744073709551516 executing sleep duration 0
-Consumer(2): Job id 18446744073709551516 completed
-Consumer(2): Job id 18446744073709551515 executing sleep duration 0
-Consumer(1): Job id 18446744073709551515 completed
-Consumer(1): Job id 18446744073709551514 executing sleep duration 0
-Consumer(2): Job id 18446744073709551514 completed
-Consumer(2): Job id 18446744073709551513 executing sleep duration 0
-Consumer(1): Job id 18446744073709551513 completed
-Consumer(1): Job id 18446744073709551512 executing sleep duration 0
-Consumer(2): Job id 18446744073709551512 completed
-Consumer(2): Job id 18446744073709551511 executing sleep duration 0
-Consumer(1): Job id 18446744073709551511 completed
-Consumer(1): Job id 18446744073709551510 executing sleep duration 0
-Consumer(2): Job id 18446744073709551510 completed
-Consumer(1): Job id 18446744073709551509 completed
-Consumer(1): Job id 18446744073709551508 executing sleep duration 0
-Consumer(2): Job id 18446744073709551508 executing sleep duration 0
-Consumer(1): Job id 18446744073709551508 completed
-Consumer(1): Job id 18446744073709551507 executing sleep duration 0
-Consumer(2): Job id 18446744073709551507 completed
-Consumer(2): Job id 18446744073709551506 executing sleep duration 0
-Consumer(1): Job id 18446744073709551506 completed
-Consumer(1): Job id 18446744073709551505 executing sleep duration 0
-Consumer(2): Job id 18446744073709551505 completed
-Consumer(2): Job id 18446744073709551504 executing sleep duration 0
-Consumer(1): Job id 18446744073709551504 completed
-Consumer(1): Job id 18446744073709551503 executing sleep duration 0
-Consumer(2): Job id 18446744073709551503 completed
-Consumer(2): Job id 18446744073709551502 executing sleep duration 0
-Consumer(1): Job id 18446744073709551502 completed
-Consumer(1): Job id 18446744073709551501 executing sleep duration 0
-Consumer(2): Job id 18446744073709551501 completed
-Consumer(2): Job id 18446744073709551500 executing sleep duration 0
-Consumer(1): Job id 18446744073709551500 completed
-Consumer(1): Job id 18446744073709551499 executing sleep duration 0
-Consumer(2): Job id 18446744073709551499 completed
-Consumer(2): Job id 18446744073709551498 executing sleep duration 0
-Consumer(1): Job id 18446744073709551498 completed
-Consumer(1): Job id 18446744073709551497 executing sleep duration 0
-Consumer(2): Job id 18446744073709551497 completed
-Consumer(2): Job id 18446744073709551496 executing sleep duration 0
-Consumer(1): Job id 18446744073709551496 completed
-Consumer(1): Job id 18446744073709551495 executing sleep duration 0
-Consumer(2): Job id 18446744073709551495 completed
-Consumer(2): Job id 18446744073709551494 executing sleep duration 0
-Consumer(1): Job id 18446744073709551494 completed
-Consumer(1): Job id 18446744073709551493 executing sleep duration 0
-Consumer(2): Job id 18446744073709551493 completed
-Consumer(2): Job id 18446744073709551492 executing sleep duration 0
-Consumer(1): Job id 18446744073709551492 completed
-Consumer(1): Job id 18446744073709551491 executing sleep duration 0
-Consumer(2): Job id 18446744073709551491 completed
-Consumer(2): Job id 18446744073709551490 executing sleep duration 0
-Consumer(1): Job id 18446744073709551490 completed
-Consumer(1): Job id 18446744073709551489 executing sleep duration 0
-Consumer(2): Job id 18446744073709551489 completed
-Consumer(2): Job id 18446744073709551488 executing sleep duration 0
-Consumer(1): Job id 18446744073709551488 completed
-Consumer(2): Job id 18446744073709551488 completed
-Consumer(1): Job id 18446744073709551487 executing sleep duration 0
+Producer(0): Job id 0 duration 9
+Consumer(0): Job id 0 executing sleep duration 9
+Producer(1): Job id 1 duration 7
+Consumer(1): Job id 1 executing sleep duration 7
+Producer(0): Job id 2 duration 7
+Consumer(2): Job id 2 executing sleep duration 7
+Producer(1): Job id 3 duration 2
+Producer(0): Job id 4 duration 6
+Producer(1): Job id 5 duration 5
+Consumer(1): Job id 1 completed
+Consumer(1): Job id 3 executing sleep duration 2
+Consumer(0): Job id 0 completed
+Consumer(0): Job id 4 executing sleep duration 6
+Producer(0): Job id 0 duration 7
+Consumer(1): Job id 3 completed
+Consumer(1): Job id 5 executing sleep duration 5
+Consumer(2): Job id 2 completed
+Consumer(2): Job id 0 executing sleep duration 7
+Producer(1): Job id 1 duration 0
+Producer(0): Job id 2 duration 8
+Producer(0): Job id 3 duration 6
+Producer(0): No more jobs to generate.
+Producer(1): Job id 4 duration 5
+Consumer(0): Job id 4 completed
+Consumer(0): Job id 1 executing sleep duration 0
+Consumer(0): Job id 1 completed
+Consumer(0): Job id 2 executing sleep duration 8
+Consumer(1): Job id 5 completed
+Consumer(1): Job id 3 executing sleep duration 6
+Consumer(2): Job id 0 completed
+Consumer(2): Job id 4 executing sleep duration 5
+Producer(1): Job id 5 duration 2
+Producer(1): No more jobs to generate.
+Consumer(1): Job id 3 completed
+Consumer(1): Job id 5 executing sleep duration 2
+Consumer(0): Job id 2 completed
+Consumer(2): Job id 4 completed
+Consumer(1): Job id 5 completed
+Consumer(1): No more jobs left.
+Consumer(2): No more jobs left.
+Consumer(0): No more jobs left.
